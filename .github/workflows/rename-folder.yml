@@ -10,6 +10,9 @@ jobs:
   rename-folder:
     runs-on: ubuntu-latest
     permissions:
+      contents: write
+      issues: write
+      repository-projects: read
       pull-requests: write
 
     steps:
