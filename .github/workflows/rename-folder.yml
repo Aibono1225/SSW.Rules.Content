@@ -17,7 +17,7 @@ jobs:
     - name: Check for modified rule.md
       id: check_modified
       run: |
-        if git diff --name-only ${{ github.event.before }}..${{ github.event.after }} | grep -q 'rule.md'; then
+        if git diff --name-only $(git merge-base origin/main HEAD)..HEAD | grep -q 'rule.md'; then
           echo "modified=true" >> $GITHUB_OUTPUT
         else
           echo "modified=false" >> $GITHUB_OUTPUT
@@ -27,7 +27,7 @@ jobs:
       id: rename_folder
       if: steps.check_modified.outputs.modified == 'true'
       run: |
-        folder_name=$(dirname $(git diff --name-only ${{ github.event.before }}..${{ github.event.after }} | grep 'rule.md' | head -n 1))
+        folder_name=$(dirname $(git diff --name-only $(git merge-base origin/main HEAD)..HEAD | grep 'rule.md' | head -n 1))
         uri=$(grep -m 1 '^uri:' ${{ github.workspace }}/$folder_name/rule.md | awk '{print $2}')
         echo "$folder_name" >> $GITHUB_OUTPUT
         echo "$uri" >> $GITHUB_OUTPUT
