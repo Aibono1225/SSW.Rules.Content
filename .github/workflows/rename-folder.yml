@@ -29,8 +29,8 @@ jobs:
       run: |
         folder_name=$(dirname $(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep 'rule.md' | head -n 1))
         uri=$(grep -m 1 '^uri:' ${{ github.workspace }}/$folder_name/rule.md | awk '{print $2}')
-        echo "${{ folder_name }}"
-        echo "${{ uri }}"
+        echo "$folder_name" >> $GITHUB_OUTPUT
+        echo "$uri" >> $GITHUB_OUTPUT
         if [ "$folder_name" != "$uri" ]; then
           mv $folder_name $uri
           echo "rename=true" >> $GITHUB_OUTPUT
