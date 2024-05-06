@@ -11,6 +11,7 @@ authors:
 related: 
 - 404-useful-error-page
 redirects:
+   - rules/404-error-avoid-changing-the-url
 - do-you-avoid-changing-the-url-on-a-404-error
 
 ---
