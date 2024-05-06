@@ -73,11 +73,14 @@ jobs:
                 echo "Old folder name is already in redirects"
               else
                 # Append old folder name to redirects
-                sed -i "/^redirects:/a   - $folder_name" ${{ github.workspace }}/$uri/rule.md
+                sed -i "/^redirects:/a \ \ - $folder_name" ${{ github.workspace }}/$uri/rule.md
               fi
             else
               # Add redirects field and append old folder name
-              sed -i "/^---/a redirects:  - $folder_name" ${{ github.workspace }}/$uri/rule.md
+              sed -i "/^---/{
+                N
+                /\n---/i redirects:\n  - $folder_name
+              }" ${{ github.workspace }}/$uri/rule.md
             fi
 
           fi
