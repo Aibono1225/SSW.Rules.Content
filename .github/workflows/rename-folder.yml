@@ -65,6 +65,21 @@ jobs:
           if [ "$folder_name" != "$uri" ]; then
             mv ${{ github.workspace }}/$folder_name ${{ github.workspace }}/$uri
             is_rename=true
+
+            # Check if redirects field exists in rule.md frontmatter
+            if grep -q '^redirects:' ${{ github.workspace }}/$rule_file; then
+              # Check if the redirects already contains the old folder name
+              if grep -q "\b$folder_name\b" ${{ github.workspace }}/$rule_file; then
+                echo "Old folder name is already in redirects"
+              else
+                # Append old folder name to redirects
+                sed -i "/^redirects:/a \ \ \ - $folder_name" ${{ github.workspace }}/$rule_file
+              fi
+            else
+              # Add redirects field and append old folder name
+              sed -i "/^---/a redirects:\n  - $folder_name" ${{ github.workspace }}/$rule_file
+            fi
+
           fi
         done
         echo "rename=$is_rename" >> "$GITHUB_OUTPUT"
