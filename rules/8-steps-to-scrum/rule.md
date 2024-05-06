@@ -1,7 +1,7 @@
 ---
 type: rule
 title: Do you know the 8 Steps to Scrum?
-uri: 8-steps-to-scrum
+uri: 8-steps-to-scrum1
 authors:
   - title: Adam Cogan
     url: https://ssw.com.au/people/adam-cogan
