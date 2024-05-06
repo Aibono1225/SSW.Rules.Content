@@ -54,9 +54,11 @@ jobs:
         for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | grep 'rule.md'); do
           # Get the folder containing the rule.md file
           folder_name=$(dirname $rule_file)
+          echo "Folder name: $folder_name"
           
           # Get the uri from the rule.md file
           uri=$(grep -m 1 '^uri:' ${{ github.workspace }}/$rule_file | awk '{print $2}')
+          echo "URI: $uri"
           
           # Check if folder_name is different from uri
           if [ "$folder_name" != "$uri" ]; then
