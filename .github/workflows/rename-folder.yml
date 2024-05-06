@@ -77,10 +77,10 @@ jobs:
               fi
             else
               # Add redirects field and append old folder name
-              sed -i "/^---/{
-                N
-                /\n---/i redirects:\n  - $folder_name
-              }" ${{ github.workspace }}/$uri/rule.md
+              sed -i -e '/^---/ { 
+                  a\
+                redirects:\n  - '"$folder_name"'
+              }' ${{ github.workspace }}/$uri/rule.md
             fi
 
           fi
