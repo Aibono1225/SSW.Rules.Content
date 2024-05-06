@@ -33,18 +33,40 @@ jobs:
           echo "modified=false" >> "$GITHUB_OUTPUT"
         fi
 
-    - name: Rename folder if necessary
-      id: rename_folder
+    # - name: Rename folder if necessary
+    #   id: rename_folder
+    #   if: steps.check_modified.outputs.modified == 'true'
+    #   run: |
+    #     folder_name=$(dirname $(git diff --name-only $(git merge-base origin/main HEAD) | grep 'rule.md' | head -n 1))
+    #     uri=$(grep -m 1 '^uri:' ${{ github.workspace }}/$folder_name/rule.md | awk '{print $2}')
+    #     if [ "$folder_name" != "$uri" ]; then
+    #       mv $folder_name $uri
+    #       echo "rename=true" >> "$GITHUB_OUTPUT"
+    #     else
+    #       echo "rename=false" >> "$GITHUB_OUTPUT"
+    #     fi
+
+    - name: Rename folders if necessary
+      id: rename_folders
       if: steps.check_modified.outputs.modified == 'true'
       run: |
-        folder_name=$(dirname $(git diff --name-only $(git merge-base origin/main HEAD) | grep 'rule.md' | head -n 1))
-        uri=$(grep -m 1 '^uri:' ${{ github.workspace }}/$folder_name/rule.md | awk '{print $2}')
-        if [ "$folder_name" != "$uri" ]; then
-          mv $folder_name $uri
-          echo "rename=true" >> "$GITHUB_OUTPUT"
-        else
-          echo "rename=false" >> "$GITHUB_OUTPUT"
-        fi
+        # Loop through each rule.md file
+        for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | grep 'rule.md'); do
+          # Get the folder containing the rule.md file
+          folder_name=$(dirname $rule_file)
+          
+          # Get the uri from the rule.md file
+          uri=$(grep -m 1 '^uri:' ${{ github.workspace }}/$rule_file | awk '{print $2}')
+          
+          # Check if folder_name is different from uri
+          if [ "$folder_name" != "$uri" ]; then
+            mv ${{ github.workspace }}/$folder_name ${{ github.workspace }}/$uri
+            echo "rename=true for $folder_name" >> "$GITHUB_OUTPUT"
+          else
+            echo "rename=false for $folder_name" >> "$GITHUB_OUTPUT"
+          fi
+        done
+
 
     - name: Commit and push changes
       if: steps.rename_folder.outputs.rename == 'true'
