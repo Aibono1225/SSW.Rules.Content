@@ -1,19 +1,13 @@
 ---
-  redirects:
-  - a-b-testing123456
-
 type: rule
 title: Do you know the best way to do A/B testing?
-uri: a-b-testing1234567
+uri: a-b-testing12345678
 authors:
   - title: Piers Sinclair
     url: https://www.ssw.com.au/people/piers-sinclair
 created: 2022-04-20T05:56:17.498Z
 guid: bb49a520-59fa-4190-b19e-b70a6b450975
 ---
-  redirects:
-  - a-b-testing123456
-
 A/B Testing is the process of testing different versions of an application on different users to gather empirical evidence to learn which version is better.
 
 Using A/B Testing enables you to get features tested and when used effectively means that **a bug will never be deployed to 100% of users.** Generally, new features should be tested on 20% of users and rolled out to others once they are reliable.
