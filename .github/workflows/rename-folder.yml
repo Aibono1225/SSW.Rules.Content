@@ -61,9 +61,9 @@ jobs:
           # Check if folder_name is different from uri
           if [ "$folder_name" != "$uri" ]; then
             mv ${{ github.workspace }}/$folder_name ${{ github.workspace }}/$uri
-            echo "rename=true for $folder_name" >> "$GITHUB_OUTPUT"
+            echo "rename=true" >> "$GITHUB_OUTPUT"
           else
-            echo "rename=false for $folder_name" >> "$GITHUB_OUTPUT"
+            echo "rename=false" >> "$GITHUB_OUTPUT"
           fi
         done
 
