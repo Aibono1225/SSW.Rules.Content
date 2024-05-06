@@ -77,7 +77,7 @@ jobs:
               fi
             else
               # Add redirects field and append old folder name
-              sed -i '/^---/ {
+              sed -i -e '/^---/ {
                 N
                 /\n---/ {
                   s/\(---\)\(\n.*\)/&\n  redirects:\n  - '"$folder_name"'\n/
