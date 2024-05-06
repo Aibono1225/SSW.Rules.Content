@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Do you have a useful 404 error page?
 guid: a006213a-e97b-46a7-a66b-beb52b205533
-uri: 404-useful-error-page
+uri: 404-useful-error-page1
 created: 2016-08-11T17:30:01.0000000Z
 authors:
 - title: Adam Cogan
