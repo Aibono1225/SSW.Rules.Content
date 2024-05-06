@@ -71,7 +71,7 @@ jobs:
 
 
     - name: Commit and push changes
-      if: steps.rename_folder.outputs.rename == 'true'
+      if: steps.rename_folders.outputs.rename == 'true'
       run: |
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
