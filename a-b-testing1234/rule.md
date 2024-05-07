@@ -2,6 +2,7 @@
 type: rule
 title: Do you know the best way to do A/B testing?
 uri: a-b-testing1234
+redirects:\n - a-b-testing123
 authors:
   - title: Piers Sinclair
     url: https://www.ssw.com.au/people/piers-sinclair
