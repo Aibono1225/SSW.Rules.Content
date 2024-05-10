@@ -49,41 +49,7 @@ jobs:
     - name: Rename folders if necessary
       id: rename_folders
       if: steps.check_modified.outputs.modified == 'true'
-      run: |
-        # Loop through each rule.md file
-        is_rename=false
-        for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | grep 'rule.md'); do
-          # Get the folder containing the rule.md file
-          folder_name=$(dirname $rule_file)
-          echo "Folder name: $folder_name"
-          
-          # Get the uri from the rule.md file
-          uri=$(grep -m 1 '^uri:' ${{ github.workspace }}/$rule_file | awk '{print $2}')
-          echo "URI: $uri"
-          
-          # Check if folder_name is different from uri
-          if [ "$folder_name" != "$uri" ]; then
-            mv ${{ github.workspace }}/$folder_name ${{ github.workspace }}/$uri
-            is_rename=true
-
-            # Check if redirects field exists in rule.md frontmatter
-            if grep -q '^redirects:' ${{ github.workspace }}/$uri/rule.md; then
-              # Check if the redirects already contains the old folder name
-              if grep -q "\b$folder_name\b" ${{ github.workspace }}/$uri/rule.md; then
-                echo "Old folder name is already in redirects"
-              else
-                # Append old folder name to redirects
-                sed -i "/^redirects:/a \ \ - $folder_name" ${{ github.workspace }}/$uri/rule.md
-              fi
-            else
-              # Add redirects field and append old folder name
-              sed -i "/uri:.*/a\\redirects:\\n  - $folder_name" "${{ github.workspace }}/$uri/rule.md"
-            fi
-
-          fi
-        done
-        echo "rename=$is_rename" >> "$GITHUB_OUTPUT"
-
+      run: sh ./.workflow/rename_folders.sh
 
     - name: Commit and push changes
       if: steps.rename_folders.outputs.rename == 'true'
