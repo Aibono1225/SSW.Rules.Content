@@ -50,8 +50,8 @@ jobs:
       id: rename_folders
       if: steps.check_modified.outputs.modified == 'true'
       run: |
-        chmod +x ../../.workflow/rename_folders.sh
-        bash ../../.workflow/rename_folders.sh
+        # chmod +x ${{ github.workspace }}/.workflow/rename_folders.sh
+        bash ${{ github.workspace }}/.workflow/rename_folders.sh
 
     - name: Commit and push changes
       if: steps.rename_folders.outputs.rename == 'true'
