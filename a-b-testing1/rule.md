@@ -2,6 +2,8 @@
 type: rule
 title: Do you know the best way to do A/B testing?
 uri: a-b-testing1
+redirects:$'
+' - a-b-testing1234567s
 authors:
   - title: Piers Sinclair
     url: https://www.ssw.com.au/people/piers-sinclair
