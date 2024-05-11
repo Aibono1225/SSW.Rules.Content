@@ -12,6 +12,7 @@ authors:
   url: https://ssw.com.au/people/kaique-biancatti
 related: []
 redirects:
+  - rules/add-the-right-apps-when-creating-a-new-team
 - apps-do-you-add-the-right-apps-when-creating-a-new-team
 - add-the-right-apps-when-creating-a-new-team
 

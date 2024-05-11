@@ -12,6 +12,7 @@ related:
 - do-you-keep-your-content-consistent-across-your-different-social-media-platforms
 - do-you-know-how-to-weed-out-spammers
 redirects:
+  - rules/add-tracking-codes-in-urls
 - do-you-add-tracking-codes-in-urls
 - add-tracking-codes-in-urls
 
