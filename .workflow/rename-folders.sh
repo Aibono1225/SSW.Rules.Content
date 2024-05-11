@@ -25,4 +25,5 @@ for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | gre
     fi
   fi
 done
+echo "$GITHUB_WORKSPACE"
 echo "rename=$is_rename" >> "$GITHUB_OUTPUT"
