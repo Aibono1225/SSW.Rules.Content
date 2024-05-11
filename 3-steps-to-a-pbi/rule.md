@@ -19,6 +19,7 @@ related:
   - definition-of-done
   - done-do-you-know-when-to-send-a-done-email-in-scrum
 redirects:
+  - 3-steps-to-a-pbi/rule.md
   - do-you-know-the-3-steps-to-completing-a-pbi
   - do-you-know-the-3-steps-to-a-pbi
 created: 2013-08-30T06:33:21.000Z

@@ -3,6 +3,7 @@ type: rule
 title: Do you know the best way to do A/B testing?
 uri: a-b-testing12345
 redirects:
+  - a-b-testing12345/rule.md
   - a-b-testing1234
 authors:
   - title: Piers Sinclair

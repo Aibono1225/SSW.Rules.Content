@@ -13,6 +13,7 @@ authors:
 related: 
 - 404-error-avoid-changing-the-url
 redirects:
+  - 404-useful-error-page1/rule.md
    - rules/404-useful-error-page
 - do-you-replace-the-404-error-with-a-useful-error-page
 

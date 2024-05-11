@@ -10,6 +10,7 @@ authors:
 related:
   - backlog-refinement-meeting
 redirects:
+  - 8-steps-to-scrum13/rule.md
   - do-you-know-the-8-steps-to-scrum
 created: 2013-06-28T03:50:10.000Z
 archivedreason: null
