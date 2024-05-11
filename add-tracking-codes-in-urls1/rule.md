@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Do you add tracking codes in URLs?
 guid: 3f11d37b-7e8d-4831-a552-dcd5cb45c9d3
-uri: add-tracking-codes-in-urls1
+uri: add-tracking-codes-in-urls12
 created: 2016-04-27T03:15:46.0000000Z
 authors:
 - title: Joanna Feely
@@ -12,7 +12,6 @@ related:
 - do-you-keep-your-content-consistent-across-your-different-social-media-platforms
 - do-you-know-how-to-weed-out-spammers
 redirects:
-  - rules/add-tracking-codes-in-urls
 - do-you-add-tracking-codes-in-urls
 - add-tracking-codes-in-urls
 

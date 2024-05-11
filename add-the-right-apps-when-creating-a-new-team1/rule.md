@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Apps - Do you add the right apps when creating a new Team?
 guid: 24cee1b2-5364-4519-8cfa-b352154dfc35
-uri: add-the-right-apps-when-creating-a-new-team1
+uri: add-the-right-apps-when-creating-a-new-team12
 created: 2020-12-21T20:00:07.0000000Z
 authors:
 - title: Adam Cogan
@@ -12,7 +12,6 @@ authors:
   url: https://ssw.com.au/people/kaique-biancatti
 related: []
 redirects:
-  - rules/add-the-right-apps-when-creating-a-new-team
 - apps-do-you-add-the-right-apps-when-creating-a-new-team
 - add-the-right-apps-when-creating-a-new-team
 

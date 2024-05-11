@@ -2,7 +2,9 @@
 
 is_rename=false
 for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | grep 'rule.md'); do
-  folder_name=$(dirname $rule_file)
+  folder_path=$(dirname $rule_file)
+  folder_name=${rule_file#rules/}
+  echo "Folder path: $folder_path"
   echo "Folder name: $folder_name"
   
   uri=$(grep -m 1 '^uri:' "${GITHUB_WORKSPACE}/$rule_file" | awk '{print $2}')
