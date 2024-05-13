@@ -2,8 +2,8 @@
 
 is_rename=false
 for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | grep 'rule.md'); do
-  folder_name=$(dirname $rule_file)
-  # folder_name=${folder_path#rules/}
+  folder_path=$(dirname $rule_file)
+  folder_name=${folder_path#rules/}
   echo "Folder path: $folder_path"
   echo "Folder name: $folder_name"
   
@@ -11,7 +11,7 @@ for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | gre
   echo "URI: $uri"
   
   if [ "$folder_name" != "$uri" ]; then
-    mv "${GITHUB_WORKSPACE}/$folder_name" "${GITHUB_WORKSPACE}/$uri"
+    mv "${GITHUB_WORKSPACE}/$folder_path" "${GITHUB_WORKSPACE}/$uri"
     is_rename=true
 
     if grep -q '^redirects:' "${GITHUB_WORKSPACE}/$uri/rule.md"; then
@@ -21,9 +21,8 @@ for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | gre
         sed -i "/^redirects:/a \ \ - $folder_name" "${GITHUB_WORKSPACE}/$uri/rule.md"
       fi
     else
-      sed -i "/uri:.*/a\\redirects:\\n  - $folder_name#rules/" "${GITHUB_WORKSPACE}/$uri/rule.md"
+      sed -i "/uri:.*/a\\redirects:\\n  - $folder_name" "${GITHUB_WORKSPACE}/$uri/rule.md"
     fi
   fi
 done
-echo "$GITHUB_WORKSPACE"
 echo "rename=$is_rename" >> "$GITHUB_OUTPUT"
