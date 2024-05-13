@@ -1,7 +1,7 @@
 ---
 type: rule
 title: Do your User Stories include Acceptance Criteria?
-uri: acceptance-criteria1
+uri: acceptance-criteria12
 authors:
   - title: Adam Cogan
     url: https://ssw.com.au/people/adam-cogan
