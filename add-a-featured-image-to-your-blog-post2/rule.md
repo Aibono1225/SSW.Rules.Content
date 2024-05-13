@@ -10,6 +10,7 @@ authors:
   url: https://ssw.com.au/people/adam-cogan
 related: []
 redirects:
+  - add-a-featured-image-to-your-blog-post
 - do-you-add-a-featured-image-to-your-blog-post
 
 ---
