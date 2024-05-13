@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Do you add a featured image to your blog post?
 guid: 70b94631-7f63-4209-87f1-9f854ba8db38
-uri: add-a-featured-image-to-your-blog-post
+uri: add-a-featured-image-to-your-blog-post2
 created: 2018-04-03T23:31:26.0000000Z
 authors:
 - title: Adam Cogan
