@@ -24,6 +24,7 @@ related:
   - done-do-you-know-when-to-send-a-done-email-in-scrum
   - close-pbis-with-context
 redirects:
+  - rules/3-steps-to-a-pbi1
   - do-you-know-the-3-steps-to-completing-a-pbi
   - do-you-know-the-3-steps-to-a-pbi
   - 3-steps-to-a-pbi
