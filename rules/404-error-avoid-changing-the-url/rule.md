@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Do you avoid changing the URL on a 404 error?
 guid: 0d3576ad-6b39-4682-b425-3d68751a100b
-uri: 404-error-avoid-changing-the-url
+uri: 404-error-avoid-changing-the-url1
 created: 2016-08-11T18:08:44.0000000Z
 authors:
   - title: Adam Cogan
@@ -12,6 +12,7 @@ related:
 - 404-useful-error-page
 redirects:
 - do-you-avoid-changing-the-url-on-a-404-error
+- 404-error-avoid-changing-the-url
 
 ---
 
