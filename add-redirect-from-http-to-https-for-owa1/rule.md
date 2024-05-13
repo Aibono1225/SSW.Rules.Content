@@ -10,6 +10,7 @@ authors:
   url: https://ssw.com.au/people/stanley-sidik
 related: []
 redirects:
+  - add-redirect-from-http-to-https-for-owa
 - do-you-add-a-redirect-from-http-to-https-for-owa
 - configure-redirection-to-https-owa
 - add-redirect-from-http-to-https-for-owa
