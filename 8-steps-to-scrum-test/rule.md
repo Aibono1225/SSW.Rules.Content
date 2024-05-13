@@ -1,7 +1,7 @@
 ---
 type: rule
 title: Do you know the 8 Steps to Scrum?
-uri: 8-steps-to-scrum-test
+uri: 8-steps-to-scrum-test-dou
 authors:
   - title: Adam Cogan
     url: https://ssw.com.au/people/adam-cogan
@@ -10,8 +10,7 @@ authors:
 related:
   - backlog-refinement-meeting
 redirects:
-  - 8-steps-to-scrum-test-double
-  - do-you-know-the-8-steps-to-scrum
+  - 8-steps-to-scrum
 created: 2013-06-28T03:50:10.000Z
 archivedreason: null
 guid: 5759f753-1524-4803-869c-8b881eae28a1
