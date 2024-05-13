@@ -5,7 +5,7 @@ seoDescription: Master the 3 essential steps of PBI management with SSW's expert
   guide. From readiness to coding and finalization, streamline your Agile
   processes for maximum efficiency. Learn more and enhance your project
   management skills today.
-uri: 3-steps-to-a-pbi
+uri: 3-steps-to-a-pbi1
 authors:
   - title: Adam Cogan
     url: https://ssw.com.au/people/adam-cogan
@@ -26,6 +26,7 @@ related:
 redirects:
   - do-you-know-the-3-steps-to-completing-a-pbi
   - do-you-know-the-3-steps-to-a-pbi
+  - 3-steps-to-a-pbi
 created: 2013-08-30T06:33:21.000Z
 archivedreason: null
 guid: 1de9df77-9b69-4242-b648-e08e5980e9a6
