@@ -15,7 +15,7 @@ for rule_file in $(git diff --name-only $(git merge-base origin/main HEAD) | gre
     is_rename=true
 
     if grep -q '^redirects:' "${GITHUB_WORKSPACE}/$uri/rule.md"; then
-      if grep -q "redirects:.*-[^-]*$folder_name[^-]" "${GITHUB_WORKSPACE}/$uri/rule.md"; then
+      if grep -q "redirects:.*- $folder_name$" "${GITHUB_WORKSPACE}/$uri/rule.md"; then
         echo "Old folder name is already in redirects"
       else
         sed -i "/^redirects:/a \ \ - $folder_name" "${GITHUB_WORKSPACE}/$uri/rule.md"
