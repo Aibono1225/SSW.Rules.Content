@@ -12,6 +12,7 @@ authors:
   url: https://ssw.com.au/people/brendan-richards
 related: []
 redirects:
+  - add-local-configuration-file-for-developer-specific-settings
 - do-you-add-a-local-configuration-file-for-developer-specific-settings
 
 ---
