@@ -3,15 +3,17 @@ type: rule
 archivedreason: 
 title: Do you add a redirect from http to https for OWA?
 guid: df2d7b63-316f-4989-912e-09543657f80c
-uri: add-redirect-from-http-to-https-for-owa
+uri: add-redirect-from-http-to-https-for-owa1
 created: 2016-05-02T06:48:16.0000000Z
 authors:
 - title: Stanley Sidik
   url: https://ssw.com.au/people/stanley-sidik
 related: []
 redirects:
+  - add-redirect-from-http-to-https-for-owa
 - do-you-add-a-redirect-from-http-to-https-for-owa
 - configure-redirection-to-https-owa
+- add-redirect-from-http-to-https-for-owa
 
 ---
 

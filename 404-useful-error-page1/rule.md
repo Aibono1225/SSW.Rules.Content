@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Do you have a useful 404 error page?
 guid: a006213a-e97b-46a7-a66b-beb52b205533
-uri: 404-useful-error-page
+uri: 404-useful-error-page1
 created: 2016-08-11T17:30:01.0000000Z
 authors:
 - title: Adam Cogan
@@ -13,7 +13,9 @@ authors:
 related: 
 - 404-error-avoid-changing-the-url
 redirects:
+  - 404-useful-error-page
 - do-you-replace-the-404-error-with-a-useful-error-page
+- 404-useful-error-page
 
 ---
 
@@ -26,8 +28,9 @@ A well-designed custom error page encourages surfers to remain in your site and 
 ```xml
 <customErrors mode="Off"></customErrors>
 ```
+
 ::: bad
-Figure: Bad example - The default code on web.config 
+Figure: Bad example - The default code on web.config
 :::
 
 ```xml
@@ -35,6 +38,7 @@ Figure: Bad example - The default code on web.config
 <error statusCode="404" redirect="/ssw/SSWCustomError404.aspx">
 </customErrors>
 ```
+
 ::: good
 Figure: Good example - The custom code in the web.config  
 :::
@@ -46,10 +50,10 @@ This error information is useful for the developer to do debugging. However, it 
 ```xml
 <customErrors mode="RemoteOnly" defaultRedirect="GenericErrorPage.htm"></customErrors>
 ```
+
 ::: good
 Figure: Good example - Turning on "customErrors" protects sensitive information against Hacker  
 :::
-
 
 ::: bad  
 ![Figure: Bad example - Unhandled error](404-bad.jpg)  

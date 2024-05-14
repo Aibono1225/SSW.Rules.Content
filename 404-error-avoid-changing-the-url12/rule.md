@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Do you avoid changing the URL on a 404 error?
 guid: 0d3576ad-6b39-4682-b425-3d68751a100b
-uri: 404-error-avoid-changing-the-url
+uri: 404-error-avoid-changing-the-url12
 created: 2016-08-11T18:08:44.0000000Z
 authors:
   - title: Adam Cogan
@@ -11,11 +11,13 @@ authors:
 related: 
 - 404-useful-error-page
 redirects:
+  - 404-error-avoid-changing-the-url1
 - do-you-avoid-changing-the-url-on-a-404-error
+- 404-error-avoid-changing-the-url
 
 ---
 
-When you request a URL of a file that doesn't exist, you will get an error message. You should make sure that the URL in the browser doesn't change. This way, it's easy for the user to correct. 
+When you request a URL of a file that doesn't exist, you will get an error message. You should make sure that the URL in the browser doesn't change. This way, it's easy for the user to correct.
 
 E.g. The user doesn't have to retype the whole URL if there is a spelling mistake or a forgotten/mixed up letter.
 
@@ -49,4 +51,5 @@ To show the customized error page while not change the original URL, you can use
 ``` cs
 Server.Transfer("/ssw/ErrorPage.aspx")
 ```
-**Figure: Custom error page handler in Global.asax** 
+
+**Figure: Custom error page handler in Global.asax**

@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Comments - Do you add a comment when you use Thread.Sleep?
 guid: 34e9cb81-73a3-4d80-ad1b-141bc19eb37f
-uri: add-a-comment-when-you-use-thread-sleep
+uri: add-a-comment-when-you-use-thread-sleep2
 created: 2018-04-26T22:00:01.0000000Z
 authors:
 - title: Adam Cogan
@@ -11,6 +11,7 @@ authors:
 related: []
 redirects:
 - comments-do-you-add-a-comment-when-you-use-thread-sleep
+- add-a-comment-when-you-use-thread-sleep
 
 ---
 
