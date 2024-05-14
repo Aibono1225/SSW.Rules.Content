@@ -3,7 +3,7 @@ type: rule
 archivedreason: 
 title: Do you add a local configuration file for developer-specific settings?
 guid: 3687d1f8-1a96-476c-898e-a363fa4ae599
-uri: add-local-configuration-file-for-developer-specific-settings
+uri: add-local-configuration-file-for-developer-specific-settings22
 created: 2019-01-11T19:45:12.0000000Z
 authors:
 - title: Adam Cogan
