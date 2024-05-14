@@ -10,7 +10,6 @@ authors:
   url: https://ssw.com.au/people/brady-stroud
 related:
 - do-you-know-how-to-name-a-github-repository
-redirects: []
 
 ---
 
