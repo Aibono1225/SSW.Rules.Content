@@ -2,6 +2,11 @@
 type: rule
 title: Priorities - Do you know the 4 quadrants about important and urgent tasks?
 uri: 4-quadrants-important-and-urgent1
+<<<<<<< HEAD:rules/4-quadrants-important-and-urgent/rule.md
+=======
+redirects:
+  - 4-quadrants-important-and-urgent
+>>>>>>> 5573bdbd2b09b8ea0585ce229ab16d762ad50c4f:4-quadrants-important-and-urgent1/rule.md
 authors:
   - title: Adam Cogan
     url: https://www.ssw.com.au/people/adam-cogan
