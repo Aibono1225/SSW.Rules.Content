@@ -55,9 +55,8 @@ jobs:
         uses: mshick/add-pr-comment@v2
         with:
           message: |
-            Hi @${{ env.pr_owner }},
-            The URI of the changed rule in this pull request doesn't match the name of the folder containing the rule.
-            It has now been automatically fixed.
-            For more details, please check: xxx
+            Hi @${{ github.event.pull_request.user.login }},
+            The URI of the modified rule didn't match the folder name. This has been automatically fixed.
+            For more details, please check: https://github.com/SSWConsulting/SSW.Rules.Content/wiki/GitHub-Action---Check-Folder-Name
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: "github-actions[bot]"
