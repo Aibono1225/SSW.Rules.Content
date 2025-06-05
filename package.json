@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tinacms dev",
+    "build": "tinacms build"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +15,7 @@
     "tinacms": "^2.7.8"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.9.8"
+    "@tinacms/cli": "^1.9.8",
+    "@types/node": "^22.15.29"
   }
 }
