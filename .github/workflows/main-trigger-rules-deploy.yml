@@ -28,6 +28,17 @@ jobs:
           owner: SSWConsulting
           repositories: SSWConsulting/SSW.Rules.Tina.Nextjs.POC
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Organize images
+        run: |
+          echo "Running image organization..."
+          node scripts/organize-images.js   
+
       - name: Build and deploy Rules
         uses: benc-uk/workflow-dispatch@v1
         with:
