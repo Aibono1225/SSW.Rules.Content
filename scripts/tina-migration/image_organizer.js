@@ -162,6 +162,8 @@ class ImageOrganizer {
     }
     
     // Get changed MDX files
+    // const changedMDXFiles = this.getChangedMDXFiles();
+
     const changedMDXFiles = this.getChangedMDXFiles();
     
     if (changedMDXFiles.length === 0) {
