@@ -16,7 +16,7 @@ class ImageOrganizer {
       const changedFiles = gitOutput
         .split('\n')
         .filter(file => file.endsWith('.mdx') && file.startsWith('rules/'))
-        .map(file => path.resolve(path.join(__dirname, '../../', file))); // <- corrige le chemin complet
+        .map(file => path.resolve(path.join(__dirname, '../../', file)));
 
       console.log('Changed MDX files:', changedFiles);
       return changedFiles;
@@ -26,7 +26,6 @@ class ImageOrganizer {
     }
   }
 
-  // Fallback: get all MDX files if git is not available
   getAllMDXFiles() {
     const mdxFiles = [];
     const scanDirectory = (dir) => {
