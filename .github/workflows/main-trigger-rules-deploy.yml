@@ -26,7 +26,7 @@ jobs:
       - name: Run image organization script
         run: |
           echo "Running image organization..."
-          node scripts/organize-images.js
+          node scripts/tina-migration/organize-images.js
 
       - name: Commit and push changes if needed
         run: |
