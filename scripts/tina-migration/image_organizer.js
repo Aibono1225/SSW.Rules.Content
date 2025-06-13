@@ -8,14 +8,7 @@ class ImageOrganizer {
     this.rulesDir = path.join(baseDir, 'rules');
     this.uploadsDir = path.join(baseDir, 'public/uploads');
     this.changedFiles = new Set();
-
-    // ––– détection de la branche courante –––
-    try {
-      this.branchName = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
-    } catch {
-      this.branchName = 'main';
-    }
-    this.isMain = this.branchName === 'main';
+    this.branchName = execSync('git rev-parse --abbrev-ref HEAD', { encoding: 'utf8' }).trim();
   }
 
   getChangedMDXFiles() {
@@ -76,14 +69,15 @@ class ImageOrganizer {
 
   // ––– nouvelle logique pour le src –––
   updateImagePaths(content, images, ruleName) {
-    const baseURL = this.isMain
-      ? 'https://github.com/SSWConsulting/SSW.Rules.Content'
-      : `https://github.com/SSWConsulting/SSW.Rules.Content/tree/${this.branchName}`;
+    const baseURL = `raw.githubusercontent.com/SSWConsulting/SSW.Rules.Content/refs/heads/${this.branchName}/rules/${ruleName}`;
     let updated = content;
+
     images.forEach(img => {
-      const newSrc = `${baseURL}/rules/${ruleName}/${img.filename}`;
-      updated = updated.replace(new RegExp(`src="${img.originalSrc}"`, 'g'), `src="${newSrc}"`);
+      const newSrc = `${baseURL}/${img.filename}`;
+      const oldPattern = new RegExp(`src="${img.originalSrc}"`, 'g');
+      updated = updated.replace(oldPattern, `src="${newSrc}"`);
     });
+
     return updated;
   }
 
