@@ -2,7 +2,9 @@ name: Validate-MDX
 
 on:
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - tina/migration-dev-content
     paths:
       - '**.mdx'
 
@@ -37,7 +39,7 @@ jobs:
           echo "MDX_FILES=$MDX_FILES" >> $GITHUB_ENV
 
       - name: Install eslint with MDX plugin
-        run: npm install -g eslint eslint-plugin-mdx
+        run: npm install -g eslint eslint-plugin-mdx eslint-plugin-react
 
       - name: Auto-fix MDX files
         run: |
