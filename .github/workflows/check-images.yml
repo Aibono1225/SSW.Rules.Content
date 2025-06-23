@@ -32,7 +32,7 @@ jobs:
         id: get_changed
         if: ${{ github.event_name == 'pull_request' }}
         run: |
-          echo "changed=$(git diff --name-only $(git merge-base origin/main HEAD) HEAD)" | paste -sd "," - >> $GITHUB_ENV
+          echo "changed=$(git diff --name-only $(git merge-base origin/tina/migration-dev-content HEAD) HEAD)" | paste -sd "," - >> $GITHUB_ENV
 
       - name: run find-unreferenced-images script
         run: |

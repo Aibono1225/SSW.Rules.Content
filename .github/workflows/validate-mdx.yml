@@ -39,7 +39,7 @@ jobs:
           echo "MDX_FILES=$MDX_FILES" >> $GITHUB_ENV
 
       - name: Install eslint with MDX plugin
-        run: npm install -g eslint eslint-plugin-mdx eslint-plugin-react
+        run: npm install -g eslint@8 eslint-plugin-mdx eslint-plugin-react
 
       - name: Auto-fix MDX files
         run: |
