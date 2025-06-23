@@ -4,7 +4,9 @@ name: Check-Images
 on:
   # # Triggers the workflow on pull request events but only for the main branch
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
+      - tina/migration-dev-content
   # TODO: Trigger temporarily disabled as per https://github.com/SSWConsulting/SSW.Rules/issues/1065
     
   # Allows you to run this workflow manually from the Actions tab
@@ -30,7 +32,7 @@ jobs:
         id: get_changed
         if: ${{ github.event_name == 'pull_request' }}
         run: |
-          echo "changed=$(git diff --name-only $(git merge-base origin/main HEAD) HEAD)" | paste -sd "," - >> $GITHUB_ENV
+          echo "changed=$(git diff --name-only $(git merge-base origin/tina/migration-dev-content HEAD) HEAD)" | paste -sd "," - >> $GITHUB_ENV
 
       - name: run find-unreferenced-images script
         run: |
