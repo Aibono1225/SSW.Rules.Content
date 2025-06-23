@@ -1,0 +1,17 @@
+{
+  "name": "ssw.rules.content",
+  "version": "1.0.0",
+  "description": "<img src=\"https://raw.githubusercontent.com/SSWConsulting/SSW.Rules.Content/main/_docs/images/ssw-banner.png\">",
+  "main": ".eslintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^8.57.1",
+    "eslint-plugin-mdx": "^3.5.0",
+    "eslint-plugin-react": "^7.37.5"
+  }
+}
