@@ -29,7 +29,7 @@ module.exports = {
               ]
             }
           ],
-  
+
           "react/jsx-no-undef": "off",
           "react/jsx-uses-vars": "warn",
           "react/self-closing-comp": "warn",
@@ -37,5 +37,4 @@ module.exports = {
         }
       }
     ]
-  };
-  
+};
